@@ -31,8 +31,10 @@ class GLIPDemo(object):
                  min_image_size=None,
                  show_mask_heatmaps=False,
                  masks_per_dim=5,
-                 load_model=True
+                 load_model=True,
+                 color=255
                  ):
+        self.color = color
         self.cfg = cfg.clone()
         if load_model:
             self.model = build_detection_model(cfg)
